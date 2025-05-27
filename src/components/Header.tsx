@@ -20,8 +20,7 @@ const Header = () => {
     { href: '#about', label: 'Sobre' },
     { href: '#gallery', label: 'Galeria' },
     { href: '#stats', label: 'Resultados' },
-    { href: '#faq', label: 'FAQ' },
-    { href: '#contact', label: 'Contato' }
+    { href: '#faq', label: 'FAQ' }
   ];
 
   return (
@@ -35,10 +34,12 @@ const Header = () => {
       <nav className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-2 animate-fade-in">
-            <div className="w-8 h-8 bg-movvi-yellow rounded-lg flex items-center justify-center">
-              <span className="text-black font-bold text-xl">M</span>
-            </div>
+          <div className="flex items-center space-x-3 animate-fade-in">
+            <img 
+              src="https://i.postimg.cc/mkdfxx87/501473835-17853749343446467-3939770945407392987-n-removebg-preview.png" 
+              alt="Movvi Logo" 
+              className="w-10 h-10 object-contain"
+            />
             <span className="text-2xl font-bold text-black font-playfair">
               Movvi
             </span>
@@ -62,7 +63,7 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden md:block animate-fade-in">
             <a
-              href="#contact"
+              href="#faq"
               className="bg-movvi-yellow text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-400 transition-all duration-300 hover:scale-105 shadow-lg"
             >
               Consulta Gratuita
@@ -94,7 +95,7 @@ const Header = () => {
               ))}
               <div className="px-6 py-3">
                 <a
-                  href="#contact"
+                  href="#faq"
                   className="block text-center bg-movvi-yellow text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-400 transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >

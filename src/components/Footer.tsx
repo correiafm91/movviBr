@@ -16,8 +16,7 @@ const Footer = () => {
     { label: 'Início', href: '#home' },
     { label: 'Sobre', href: '#about' },
     { label: 'Galeria', href: '#gallery' },
-    { label: 'FAQ', href: '#faq' },
-    { label: 'Contato', href: '#contact' }
+    { label: 'FAQ', href: '#faq' }
   ];
 
   const services = [
@@ -35,10 +34,12 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="w-8 h-8 bg-movvi-yellow rounded-lg flex items-center justify-center">
-                <span className="text-black font-bold text-xl">M</span>
-              </div>
+            <div className="flex items-center space-x-3 mb-6">
+              <img 
+                src="https://i.postimg.cc/mkdfxx87/501473835-17853749343446467-3939770945407392987-n-removebg-preview.png" 
+                alt="Movvi Logo" 
+                className="w-10 h-10 object-contain bg-white rounded-lg p-1"
+              />
               <span className="text-2xl font-bold font-playfair">Movvi</span>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
@@ -136,7 +137,7 @@ const Footer = () => {
           <div className="inline-flex items-center px-6 py-3 bg-gray-900 rounded-full border border-gray-800">
             <span className="text-movvi-yellow font-semibold mr-2">✓</span>
             <span className="text-gray-300 text-sm">
-              Empresa certificada e líder na América do Sul
+              Empresa certificada e líder na América do Sul com 5 anos de experiência
             </span>
           </div>
         </div>
