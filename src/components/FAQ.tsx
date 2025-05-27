@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState } from 'react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { HelpCircle } from 'lucide-react';
@@ -26,36 +25,36 @@ const FAQ = () => {
 
   const faqs = [
     {
-      question: "Quanto tempo leva para produzir um móvel personalizado?",
-      answer: "O prazo varia de acordo com a complexidade do projeto, mas geralmente entre 30 a 60 dias úteis. Projetos mais simples podem ser entregues em até 20 dias, enquanto peças mais elaboradas podem levar até 90 dias. Sempre fornecemos um cronograma detalhado após a aprovação do projeto."
+      question: "Quanto tempo leva para criar um projeto de móvel personalizado?",
+      answer: "O prazo para criação do projeto de design varia de acordo com a complexidade, geralmente entre 7 a 15 dias úteis. Projetos mais simples podem ser entregues em até 5 dias, enquanto designs mais elaborados podem levar até 20 dias. Sempre fornecemos um cronograma detalhado após a consulta inicial."
     },
     {
-      question: "Vocês fazem projetos para todo o Brasil?",
-      answer: "Sim! Atendemos todo o território nacional. Para regiões mais distantes, calculamos o frete de entrega e instalação. Também temos parcerias com montadores qualificados em várias cidades para garantir a melhor instalação dos seus móveis."
+      question: "Vocês fabricam os móveis ou apenas fazem o design?",
+      answer: "Somos especializados em design de móveis personalizados. Criamos projetos detalhados e acompanhamos todo o processo de fabricação através de parcerias com empresas e profissionais qualificados próximos à sua região. Isso garante qualidade e reduz custos de transporte."
     },
     {
-      question: "É possível ver o projeto antes da produção?",
-      answer: "Absolutamente! Criamos renders 3D fotorrealísticos do seu projeto para que você possa visualizar exatamente como ficará o móvel em seu ambiente antes de iniciarmos a produção. Fazemos quantas alterações forem necessárias até que você esteja completamente satisfeito."
+      question: "É possível ver o projeto antes da fabricação?",
+      answer: "Absolutamente! Criamos renders 3D fotorrealísticos do seu projeto para que você possa visualizar exatamente como ficará o móvel em seu ambiente antes de iniciar a fabricação. Fazemos quantas alterações forem necessárias até que você esteja completamente satisfeito."
     },
     {
-      question: "Quais materiais vocês utilizam?",
-      answer: "Trabalhamos com uma ampla variedade de materiais de alta qualidade: madeiras nobres (mogno, carvalho, freijó), MDF e MDP de primeira linha, laminados, vidros temperados, metais e acabamentos especiais. Todos os materiais são certificados e sustentáveis."
+      question: "Como funciona o acompanhamento da fabricação?",
+      answer: "Após aprovação do design, indicamos fabricantes ou marceneiros qualificados em sua região. Acompanhamos todo o processo através de relatórios e visitas técnicas, garantindo que o produto final esteja exatamente conforme o projeto aprovado."
     },
     {
-      question: "Vocês oferecem garantia?",
-      answer: "Sim! Oferecemos 2 anos de garantia para estrutura e 1 ano para acabamentos e ferragens. Além disso, prestamos assistência técnica vitalícia para manutenções e pequenos reparos. Nossa garantia cobre defeitos de fabricação e problemas estruturais."
+      question: "Vocês atendem em quais regiões?",
+      answer: "Atendemos 4 países na América do Sul, incluindo todo o Brasil. Para cada região, temos uma rede de parceiros fabricantes qualificados que seguem nossos padrões de qualidade e especificações técnicas."
     },
     {
       question: "Como funciona o processo de orçamento?",
-      answer: "O orçamento é gratuito! Primeiro fazemos uma visita técnica ou videochamada para entender suas necessidades, depois criamos um projeto inicial com estimativa de custos. Após aprovação, detalhamos o projeto completo com valores finais. Só iniciamos a produção após sua aprovação total."
+      answer: "O orçamento de design é gratuito! Primeiro fazemos uma consulta para entender suas necessidades, depois criamos um projeto inicial com estimativa de custos de fabricação. Após aprovação, detalhamos o projeto completo com valores finais incluindo design e fabricação."
     },
     {
       question: "É possível fazer apenas parte de um ambiente?",
       answer: "Claro! Não é necessário mobiliar o ambiente inteiro. Podemos criar desde uma única peça especial até ambientes completos. Nossa especialidade é adaptar nossa criatividade ao seu orçamento e necessidades específicas."
     },
     {
-      question: "Vocês fazem manutenção dos móveis após a entrega?",
-      answer: "Sim! Oferecemos serviço de manutenção preventiva e corretiva. Recomendamos uma revisão anual para móveis de uso intenso. Também oferecemos serviços de restauração e modernização para dar nova vida aos seus móveis."
+      question: "Vocês dão suporte após a entrega do móvel?",
+      answer: "Sim! Acompanhamos o processo até a entrega final e oferecemos suporte técnico para questões relacionadas ao design. Para manutenções do móvel, nossos parceiros fabricantes oferecem garantia e assistência técnica adequada."
     }
   ];
 
@@ -76,7 +75,7 @@ const FAQ = () => {
           
           <p className={`text-xl text-gray-600 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isVisible ? 'animate-fade-in opacity-100' : 'opacity-0'}`}>
             Esclarecemos as principais dúvidas sobre nossos serviços de 
-            <span className="text-movvi-yellow font-semibold"> móveis personalizados</span>. 
+            <span className="text-movvi-yellow font-semibold"> design de móveis personalizados</span>. 
             Não encontrou sua resposta? Entre em contato conosco!
           </p>
         </div>

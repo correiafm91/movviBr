@@ -1,13 +1,12 @@
-
 import React, { useEffect, useRef, useState } from 'react';
 import { TrendingUp, Users, Award, Globe } from 'lucide-react';
 
 const Stats = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [counters, setCounters] = useState({
-    clients: 0,
-    satisfaction: 0,
     projects: 0,
+    satisfaction: 0,
+    experience: 0,
     countries: 0
   });
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -33,10 +32,10 @@ const Stats = () => {
     if (isVisible) {
       const duration = 2000; // 2 seconds
       const targets = {
-        clients: 400,
+        projects: 400,
         satisfaction: 89.9,
-        projects: 1200,
-        countries: 12
+        experience: 5,
+        countries: 4
       };
 
       const startTime = Date.now();
@@ -49,9 +48,9 @@ const Stats = () => {
         const easeOutQuart = 1 - Math.pow(1 - progress, 4);
         
         setCounters({
-          clients: Math.floor(targets.clients * easeOutQuart),
-          satisfaction: +(targets.satisfaction * easeOutQuart).toFixed(1),
           projects: Math.floor(targets.projects * easeOutQuart),
+          satisfaction: +(targets.satisfaction * easeOutQuart).toFixed(1),
+          experience: Math.floor(targets.experience * easeOutQuart),
           countries: Math.floor(targets.countries * easeOutQuart)
         });
 
@@ -66,10 +65,10 @@ const Stats = () => {
 
   const stats = [
     {
-      icon: Users,
-      value: `+${counters.clients}`,
-      label: 'Clientes Atendidos',
-      description: 'Famílias e empresas que confiaram em nosso trabalho'
+      icon: TrendingUp,
+      value: `+${counters.projects}`,
+      label: 'Projetos Entregues',
+      description: 'Designs de móveis personalizados criados com excelência'
     },
     {
       icon: Award,
@@ -78,10 +77,10 @@ const Stats = () => {
       description: 'Índice de aprovação dos nossos clientes'
     },
     {
-      icon: TrendingUp,
-      value: `+${counters.projects}`,
-      label: 'Projetos Entregues',
-      description: 'Móveis personalizados criados com excelência'
+      icon: Users,
+      value: `${counters.experience}`,
+      label: 'Anos de Experiência',
+      description: 'Tradição e expertise em design de móveis personalizados'
     },
     {
       icon: Globe,
