@@ -6,7 +6,6 @@ import About from '../components/About';
 import Gallery from '../components/Gallery';
 import Stats from '../components/Stats';
 import FAQ from '../components/FAQ';
-import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
 const Index = () => {
@@ -19,7 +18,6 @@ const Index = () => {
         <Gallery />
         <Stats />
         <FAQ />
-        <Contact />
       </main>
       <Footer />
     </div>

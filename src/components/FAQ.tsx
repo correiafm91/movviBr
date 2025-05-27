@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef, useState } from 'react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { HelpCircle } from 'lucide-react';
@@ -26,7 +27,7 @@ const FAQ = () => {
   const faqs = [
     {
       question: "Quanto tempo leva para criar um projeto de móvel personalizado?",
-      answer: "O prazo para criação do projeto de design varia de acordo com a complexidade, geralmente entre 7 a 15 dias úteis. Projetos mais simples podem ser entregues em até 5 dias, enquanto designs mais elaborados podem levar até 20 dias. Sempre fornecemos um cronograma detalhado após a consulta inicial."
+      answer: "O serviço de design dura em até 3 semanas, variando de acordo com a complexidade do projeto. Projetos mais simples podem ser entregues em até 14 dias, enquanto designs mais elaborados podem levar até 3 semanas. Sempre fornecemos um cronograma detalhado após a consulta inicial."
     },
     {
       question: "Vocês fabricam os móveis ou apenas fazem o design?",
@@ -53,8 +54,8 @@ const FAQ = () => {
       answer: "Claro! Não é necessário mobiliar o ambiente inteiro. Podemos criar desde uma única peça especial até ambientes completos. Nossa especialidade é adaptar nossa criatividade ao seu orçamento e necessidades específicas."
     },
     {
-      question: "Vocês dão suporte após a entrega do móvel?",
-      answer: "Sim! Acompanhamos o processo até a entrega final e oferecemos suporte técnico para questões relacionadas ao design. Para manutenções do móvel, nossos parceiros fabricantes oferecem garantia e assistência técnica adequada."
+      question: "Vocês dão suporte após a entrega do projeto de design?",
+      answer: "Sim! Acompanhamos o processo até a entrega final do design e oferecemos suporte técnico para questões relacionadas ao projeto. Para a fabricação, nossos parceiros fabricantes oferecem garantia e assistência técnica adequada."
     }
   ];
 
@@ -98,19 +99,6 @@ const FAQ = () => {
               </AccordionItem>
             ))}
           </Accordion>
-        </div>
-
-        {/* CTA */}
-        <div className={`text-center mt-16 transition-all duration-1000 delay-800 ${isVisible ? 'animate-fade-in opacity-100' : 'opacity-0'}`}>
-          <p className="text-lg text-gray-600 mb-6">
-            Ainda tem dúvidas? Nossa equipe está pronta para ajudar!
-          </p>
-          <a
-            href="#contact"
-            className="inline-flex items-center bg-movvi-yellow text-black px-8 py-4 rounded-full font-semibold text-lg hover:bg-yellow-400 transition-all duration-300 hover:scale-105 shadow-lg"
-          >
-            Falar com Especialista
-          </a>
         </div>
       </div>
     </section>

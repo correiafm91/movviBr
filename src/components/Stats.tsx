@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef, useState } from 'react';
 import { TrendingUp, Users, Award, Globe } from 'lucide-react';
 
@@ -78,7 +79,7 @@ const Stats = () => {
     },
     {
       icon: Users,
-      value: `${counters.experience}`,
+      value: `+${counters.experience}`,
       label: 'Anos de Experiência',
       description: 'Tradição e expertise em design de móveis personalizados'
     },
@@ -146,12 +147,6 @@ const Stats = () => {
           <p className="text-lg text-gray-300 mb-6">
             Faça parte dessas estatísticas de sucesso!
           </p>
-          <a
-            href="#contact"
-            className="inline-flex items-center bg-movvi-yellow text-black px-8 py-4 rounded-full font-semibold text-lg hover:bg-yellow-400 transition-all duration-300 hover:scale-105 shadow-lg"
-          >
-            Começar Meu Projeto
-          </a>
         </div>
       </div>
     </section>
