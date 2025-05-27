@@ -56,7 +56,7 @@ const About = () => {
             <span className="text-gradient">Movvi</span>
           </h2>
           <p className={`text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-200 ${isVisible ? 'animate-fade-in opacity-100' : 'opacity-0'}`}>
-            Há mais de 15 anos, a Movvi tem sido pioneira em transformar sonhos em realidade através do 
+            Há mais de 5 anos, a Movvi tem sido pioneira em transformar sonhos em realidade através do 
             <span className="text-movvi-yellow font-semibold"> design de móveis personalizados</span>. 
             Nossa missão é criar peças únicas que reflitam a personalidade e o estilo de vida de cada cliente.
           </p>
@@ -82,11 +82,11 @@ const About = () => {
             {/* Achievement Stats */}
             <div className="grid grid-cols-2 gap-6">
               <div className="text-center p-4 bg-gray-50 rounded-lg">
-                <div className="text-3xl font-bold text-movvi-yellow mb-2">15+</div>
+                <div className="text-3xl font-bold text-movvi-yellow mb-2">5+</div>
                 <div className="text-gray-600">Anos de Experiência</div>
               </div>
               <div className="text-center p-4 bg-gray-50 rounded-lg">
-                <div className="text-3xl font-bold text-movvi-yellow mb-2">12</div>
+                <div className="text-3xl font-bold text-movvi-yellow mb-2">4</div>
                 <div className="text-gray-600">Países Atendidos</div>
               </div>
             </div>

@@ -12,41 +12,21 @@ const Footer = () => {
     { icon: Youtube, href: '#', label: 'YouTube' }
   ];
 
-  const quickLinks = [
-    { label: 'Início', href: '#home' },
-    { label: 'Sobre', href: '#about' },
-    { label: 'Galeria', href: '#gallery' },
-    { label: 'FAQ', href: '#faq' }
-  ];
-
-  const services = [
-    'Móveis Planejados',
-    'Design de Interiores',
-    'Móveis Corporativos',
-    'Restauração',
-    'Consultoria'
-  ];
-
   return (
     <footer className="bg-black text-white py-16">
       <div className="max-w-7xl mx-auto px-6">
         {/* Main Footer Content */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center space-x-3 mb-6">
+          <div className="lg:col-span-4 text-center">
+            <div className="flex justify-center mb-6">
               <img 
                 src="https://i.postimg.cc/mkdfxx87/501473835-17853749343446467-3939770945407392987-n-removebg-preview.png" 
                 alt="Movvi Logo" 
-                className="w-10 h-10 object-contain bg-white rounded-lg p-1"
+                className="w-16 h-16 object-contain bg-white rounded-lg p-2"
               />
-              <span className="text-2xl font-bold font-playfair">Movvi</span>
             </div>
-            <p className="text-gray-300 mb-6 leading-relaxed">
-              Líderes em design de móveis personalizados na América do Sul. 
-              Transformamos espaços com criatividade, qualidade e inovação.
-            </p>
-            <div className="flex space-x-4">
+            <div className="flex justify-center space-x-4 mb-8">
               {socialLinks.map((social) => (
                 <a
                   key={social.label}
@@ -57,57 +37,6 @@ const Footer = () => {
                   <social.icon className="w-5 h-5" />
                 </a>
               ))}
-            </div>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-lg font-semibold mb-6 text-movvi-yellow">Links Rápidos</h4>
-            <ul className="space-y-3">
-              {quickLinks.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-gray-300 hover:text-movvi-yellow transition-colors duration-300"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h4 className="text-lg font-semibold mb-6 text-movvi-yellow">Serviços</h4>
-            <ul className="space-y-3">
-              {services.map((service) => (
-                <li key={service}>
-                  <span className="text-gray-300">{service}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h4 className="text-lg font-semibold mb-6 text-movvi-yellow">Contato</h4>
-            <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <Phone className="w-5 h-5 text-movvi-yellow mt-0.5 flex-shrink-0" />
-                <div>
-                  <p className="text-gray-300">+55 (11) 9999-9999</p>
-                  <p className="text-sm text-gray-400">Seg - Sex: 8h às 18h</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <Mail className="w-5 h-5 text-movvi-yellow mt-0.5 flex-shrink-0" />
-                <p className="text-gray-300">contato@movvi.com.br</p>
-              </div>
-              <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-movvi-yellow mt-0.5 flex-shrink-0" />
-                <p className="text-gray-300">São Paulo, SP - Brasil</p>
-              </div>
             </div>
           </div>
         </div>

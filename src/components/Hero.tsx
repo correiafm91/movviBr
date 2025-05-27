@@ -50,7 +50,7 @@ const Hero = () => {
             Ver Nossos Projetos
           </a>
           <a
-            href="#contact"
+            href="#faq"
             className="border-2 border-black text-black px-8 py-4 rounded-full font-semibold text-lg hover:bg-black hover:text-white transition-all duration-300 hover:scale-105"
           >
             Solicitar Orçamento
@@ -76,7 +76,7 @@ const Hero = () => {
           <div className="flex items-center gap-2">
             <Sparkles className="w-5 h-5 text-movvi-yellow" />
             <span className="text-gray-600">
-              <span className="text-movvi-yellow font-bold">15+</span> anos de experiência
+              <span className="text-movvi-yellow font-bold">5+</span> anos de experiência
             </span>
           </div>
         </div>
