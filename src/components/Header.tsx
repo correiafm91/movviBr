@@ -18,7 +18,7 @@ const Header = () => {
   const navLinks = [
     { href: '#home', label: 'Início' },
     { href: '#about', label: 'Sobre' },
-    { href: '#gallery', label: 'Galeria' },
+    { href: '#gallery', label: 'Projetos' },
     { href: '#stats', label: 'Resultados' },
     { href: '#faq', label: 'FAQ' }
   ];
@@ -27,7 +27,7 @@ const Header = () => {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/95 backdrop-blur-md shadow-lg' 
+          ? 'bg-blue-900/95 backdrop-blur-md shadow-lg' 
           : 'bg-transparent'
       }`}
     >
@@ -35,13 +35,8 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-3 animate-fade-in">
-            <img 
-              src="https://i.postimg.cc/mkdfxx87/501473835-17853749343446467-3939770945407392987-n-removebg-preview.png" 
-              alt="Movvi Logo" 
-              className="w-10 h-10 object-contain"
-            />
-            <span className="text-2xl font-bold text-black font-playfair">
-              Movvi
+            <span className="text-2xl font-bold text-white font-playfair">
+              Projetos de Móveis
             </span>
           </div>
 
@@ -51,11 +46,11 @@ const Header = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-black hover:text-movvi-yellow transition-colors duration-300 font-medium relative group animate-fade-in"
+                className="text-white hover:text-white/80 transition-colors duration-300 font-medium relative group animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {link.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-movvi-yellow transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
           </div>
@@ -64,7 +59,7 @@ const Header = () => {
           <div className="hidden md:block animate-fade-in">
             <a
               href="#faq"
-              className="bg-movvi-yellow text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-400 transition-all duration-300 hover:scale-105 shadow-lg"
+              className="bg-white text-blue-900 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg"
             >
               Consulta Gratuita
             </a>
@@ -73,7 +68,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-black hover:text-movvi-yellow transition-colors"
+            className="md:hidden p-2 text-white hover:text-white/80 transition-colors"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -81,13 +76,13 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t animate-fade-in">
+          <div className="md:hidden absolute top-full left-0 right-0 bg-blue-900 shadow-lg border-t border-white/20 animate-fade-in">
             <div className="flex flex-col py-4">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="px-6 py-3 text-black hover:text-movvi-yellow hover:bg-gray-50 transition-colors"
+                  className="px-6 py-3 text-white hover:text-white/80 hover:bg-white/10 transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}
@@ -96,7 +91,7 @@ const Header = () => {
               <div className="px-6 py-3">
                 <a
                   href="#faq"
-                  className="block text-center bg-movvi-yellow text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-400 transition-colors"
+                  className="block text-center bg-white text-blue-900 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Consulta Gratuita

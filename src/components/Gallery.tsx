@@ -35,45 +35,45 @@ const Gallery = () => {
   const projects = [
     {
       id: 1,
-      title: "Sala de Estar Moderna",
+      title: "Projeto Sala Moderna",
       category: "sala",
       image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&fit=crop&q=80&w=600&h=400",
-      description: "Design minimalista com sofá personalizado e mesa de centro única"
+      description: "Projeto técnico completo para sala de estar com móveis sob medida"
     },
     {
       id: 2,
-      title: "Quarto Contemporâneo",
+      title: "Projeto Quarto Casal",
       category: "quarto",
       image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80&w=600&h=400",
-      description: "Mobiliário sob medida para otimização de espaço"
+      description: "Projeto detalhado para mobiliário de quarto com otimização de espaço"
     },
     {
       id: 3,
-      title: "Escritório Executivo",
+      title: "Projeto Escritório",
       category: "escritorio",
       image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&fit=crop&q=80&w=600&h=400",
-      description: "Mesa executiva com design ergonômico e storage integrado"
+      description: "Projeto técnico para móveis de escritório ergonômicos"
     },
     {
       id: 4,
-      title: "Cozinha Planejada",
+      title: "Projeto Cozinha",
       category: "cozinha",
       image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80&w=600&h=400",
-      description: "Móveis funcionais com design inovador"
+      description: "Projeto completo para móveis funcionais de cozinha"
     },
     {
       id: 5,
-      title: "Living Integrado",
+      title: "Projeto Living",
       category: "sala",
       image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&fit=crop&q=80&w=600&h=400",
-      description: "Ambiente integrado com móveis multifuncionais"
+      description: "Projeto técnico para ambiente integrado"
     },
     {
       id: 6,
-      title: "Suíte Master",
+      title: "Projeto Suíte",
       category: "quarto",
       image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80&w=600&h=400",
-      description: "Móveis exclusivos para o quarto principal"
+      description: "Projeto detalhado para móveis de suíte master"
     }
   ];
 
@@ -82,17 +82,17 @@ const Gallery = () => {
     : projects.filter(project => project.category === selectedCategory);
 
   return (
-    <section id="gallery" ref={sectionRef} className="py-20 bg-gray-50">
+    <section id="gallery" ref={sectionRef} className="py-20 bg-blue-950">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className={`text-4xl md:text-6xl font-bold mb-6 font-playfair transition-all duration-1000 ${isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0'}`}>
-            <span className="text-black">Nossa </span>
-            <span className="text-gradient">Galeria</span>
+            <span className="text-white">Nossos </span>
+            <span className="text-white">Projetos</span>
           </h2>
-          <p className={`text-xl text-gray-600 max-w-3xl mx-auto mb-8 transition-all duration-1000 delay-200 ${isVisible ? 'animate-fade-in opacity-100' : 'opacity-0'}`}>
-            Explore nossos projetos mais recentes e descubra como transformamos ideias em 
-            <span className="text-movvi-yellow font-semibold"> móveis extraordinários</span>.
+          <p className={`text-xl text-white/80 max-w-3xl mx-auto mb-8 transition-all duration-1000 delay-200 ${isVisible ? 'animate-fade-in opacity-100' : 'opacity-0'}`}>
+            Explore nossos projetos técnicos mais recentes e descubra como desenvolvemos 
+            <span className="text-white font-semibold"> soluções profissionais</span> para móveis personalizados.
           </p>
         </div>
 
@@ -104,8 +104,8 @@ const Gallery = () => {
               onClick={() => setSelectedCategory(category.id)}
               className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                 selectedCategory === category.id
-                  ? 'bg-movvi-yellow text-black shadow-lg'
-                  : 'bg-white text-gray-600 hover:bg-gray-100 hover:text-black'
+                  ? 'bg-white text-blue-900 shadow-lg'
+                  : 'bg-white/10 text-white hover:bg-white/20'
               }`}
             >
               {category.label}
@@ -118,7 +118,7 @@ const Gallery = () => {
           {filteredProjects.map((project, index) => (
             <div 
               key={project.id}
-              className={`group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 ${
+              className={`group bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-white/10 ${
                 isVisible ? 'animate-scale-in opacity-100' : 'opacity-0'
               }`}
               style={{ animationDelay: `${600 + index * 100}ms` }}
@@ -132,18 +132,18 @@ const Gallery = () => {
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300"></div>
                 <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="bg-white/90 p-2 rounded-full">
-                    <ExternalLink className="w-5 h-5 text-black" />
+                    <ExternalLink className="w-5 h-5 text-blue-900" />
                   </div>
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-3 text-black group-hover:text-movvi-yellow transition-colors">
+                <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-white/80 transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 mb-4 leading-relaxed">
+                <p className="text-white/60 mb-4 leading-relaxed">
                   {project.description}
                 </p>
-                <div className="flex items-center text-movvi-yellow font-medium group-hover:gap-2 transition-all duration-300">
+                <div className="flex items-center text-white font-medium group-hover:gap-2 transition-all duration-300">
                   Ver Detalhes
                   <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                 </div>
@@ -154,14 +154,14 @@ const Gallery = () => {
 
         {/* CTA */}
         <div className={`text-center transition-all duration-1000 delay-800 ${isVisible ? 'animate-fade-in opacity-100' : 'opacity-0'}`}>
-          <p className="text-lg text-gray-600 mb-6">
-            Gostou do que viu? Vamos criar algo único para você!
+          <p className="text-lg text-white/80 mb-6">
+            Precisa de um projeto técnico personalizado?
           </p>
           <a
             href="#contact"
-            className="inline-flex items-center bg-movvi-yellow text-black px-8 py-4 rounded-full font-semibold text-lg hover:bg-yellow-400 transition-all duration-300 hover:scale-105 shadow-lg"
+            className="inline-flex items-center bg-white text-blue-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg"
           >
-            Iniciar Meu Projeto
+            Solicitar Projeto
             <ArrowRight className="w-5 h-5 ml-2" />
           </a>
         </div>

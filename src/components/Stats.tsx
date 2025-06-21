@@ -31,7 +31,7 @@ const Stats = () => {
 
   useEffect(() => {
     if (isVisible) {
-      const duration = 2000; // 2 seconds
+      const duration = 2000;
       const targets = {
         projects: 400,
         satisfaction: 89.9,
@@ -45,7 +45,6 @@ const Stats = () => {
         const elapsed = Date.now() - startTime;
         const progress = Math.min(elapsed / duration, 1);
         
-        // Easing function for smooth animation
         const easeOutQuart = 1 - Math.pow(1 - progress, 4);
         
         setCounters({
@@ -68,35 +67,34 @@ const Stats = () => {
     {
       icon: TrendingUp,
       value: `+${counters.projects}`,
-      label: 'Projetos Entregues',
-      description: 'Designs de móveis personalizados criados com excelência'
+      label: 'Projetos Desenvolvidos',
+      description: 'Projetos técnicos de móveis personalizados criados'
     },
     {
       icon: Award,
       value: `${counters.satisfaction}%`,
-      label: 'Taxa de Satisfação',
-      description: 'Índice de aprovação dos nossos clientes'
+      label: 'Taxa de Aprovação',
+      description: 'Índice de aprovação dos projetos pelos clientes'
     },
     {
       icon: Users,
       value: `+${counters.experience}`,
       label: 'Anos de Experiência',
-      description: 'Tradição e expertise em design de móveis personalizados'
+      description: 'Experiência em desenvolvimento de projetos de móveis'
     },
     {
       icon: Globe,
       value: `${counters.countries}`,
       label: 'Países Atendidos',
-      description: 'Presença internacional na América do Sul'
+      description: 'Projetos desenvolvidos em diferentes países'
     }
   ];
 
   return (
-    <section id="stats" ref={sectionRef} className="py-20 bg-black text-white relative overflow-hidden">
-      {/* Background Elements */}
+    <section id="stats" ref={sectionRef} className="py-20 bg-blue-800 text-white relative overflow-hidden">
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-movvi-yellow/5 rounded-full animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-24 h-24 bg-movvi-yellow/10 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-20 left-10 w-32 h-32 bg-white/5 rounded-full animate-float"></div>
+        <div className="absolute bottom-20 right-10 w-24 h-24 bg-white/10 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
       </div>
       
       <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -104,12 +102,12 @@ const Stats = () => {
         <div className="text-center mb-16">
           <h2 className={`text-4xl md:text-6xl font-bold mb-6 font-playfair transition-all duration-1000 ${isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0'}`}>
             <span className="text-white">Números que </span>
-            <span className="text-gradient">Impressionam</span>
+            <span className="text-white">Impressionam</span>
           </h2>
-          <p className={`text-xl text-gray-300 max-w-3xl mx-auto transition-all duration-1000 delay-200 ${isVisible ? 'animate-fade-in opacity-100' : 'opacity-0'}`}>
+          <p className={`text-xl text-white/80 max-w-3xl mx-auto transition-all duration-1000 delay-200 ${isVisible ? 'animate-fade-in opacity-100' : 'opacity-0'}`}>
             Nossa trajetória de sucesso é refletida em números que demonstram a 
-            <span className="text-movvi-yellow font-semibold"> confiança</span> e 
-            <span className="text-movvi-yellow font-semibold"> satisfação</span> dos nossos clientes.
+            <span className="text-white font-semibold"> qualidade</span> e 
+            <span className="text-white font-semibold"> confiança</span> dos nossos projetos.
           </p>
         </div>
 
@@ -123,11 +121,11 @@ const Stats = () => {
               }`}
               style={{ animationDelay: `${400 + index * 150}ms` }}
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-movvi-yellow/20 rounded-full mb-6">
-                <stat.icon className="w-8 h-8 text-movvi-yellow" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-6">
+                <stat.icon className="w-8 h-8 text-white" />
               </div>
               
-              <div className="text-4xl md:text-5xl font-bold mb-3 text-movvi-yellow font-playfair">
+              <div className="text-4xl md:text-5xl font-bold mb-3 text-white font-playfair">
                 {stat.value}
               </div>
               
@@ -135,16 +133,15 @@ const Stats = () => {
                 {stat.label}
               </h3>
               
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-white/80 leading-relaxed">
                 {stat.description}
               </p>
             </div>
           ))}
         </div>
 
-        {/* Bottom CTA */}
         <div className={`text-center mt-16 transition-all duration-1000 delay-800 ${isVisible ? 'animate-fade-in opacity-100' : 'opacity-0'}`}>
-          <p className="text-lg text-gray-300 mb-6">
+          <p className="text-lg text-white/80 mb-6">
             Faça parte dessas estatísticas de sucesso!
           </p>
         </div>
