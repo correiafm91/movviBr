@@ -10,7 +10,7 @@ const ProjectTypes = () => {
       title: 'Residencial',
       description: 'Projetos personalizados para sua casa, criando ambientes únicos e funcionais que refletem seu estilo de vida.',
       icon: Home,
-      image: 'https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=600&h=400&fit=crop',
+      image: 'https://i.postimg.cc/6q47F5bD/download.jpg',
       features: ['Móveis sob medida', 'Design personalizado', 'Ambientes funcionais', 'Acabamentos exclusivos']
     },
     {
@@ -18,7 +18,7 @@ const ProjectTypes = () => {
       title: 'Corporativo',
       description: 'Soluções profissionais para escritórios e empresas, otimizando espaços de trabalho com design e funcionalidade.',
       icon: Building,
-      image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=600&h=400&fit=crop',
+      image: 'https://i.postimg.cc/0rg6vRLr/download-1.jpg',
       features: ['Móveis corporativos', 'Ergonomia avançada', 'Otimização de espaço', 'Identidade visual']
     }
   ];

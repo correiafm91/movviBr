@@ -62,50 +62,6 @@ const About = () => {
           </p>
         </div>
 
-        {/* Main Content */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
-          {/* Left Content */}
-          <div className={`transition-all duration-1000 delay-400 ${isVisible ? 'animate-slide-in-right opacity-100' : 'opacity-0'}`}>
-            <h3 className="text-3xl font-bold mb-6 font-playfair text-black">
-              <span className="text-black">Projetos</span> Profissionais
-            </h3>
-            <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              Desenvolvemos projetos técnicos completos para móveis personalizados, incluindo plantas baixas, 
-              cortes, detalhamentos, lista de materiais e especificações técnicas para fabricação.
-            </p>
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              Cada projeto passa por um processo rigoroso de desenvolvimento, onde combinamos conhecimento 
-              técnico com criatividade, garantindo projetos viáveis e de alta qualidade.
-            </p>
-            
-            {/* Achievement Stats */}
-            <div className="grid grid-cols-2 gap-6">
-              <div className="text-center p-4 bg-gray-100 rounded-lg">
-                <div className="text-3xl font-bold text-black mb-2">5+</div>
-                <div className="text-gray-600">Anos de Experiência</div>
-              </div>
-              <div className="text-center p-4 bg-gray-100 rounded-lg">
-                <div className="text-3xl font-bold text-black mb-2">4</div>
-                <div className="text-gray-600">Países Atendidos</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Image */}
-          <div className={`transition-all duration-1000 delay-600 ${isVisible ? 'animate-scale-in opacity-100' : 'opacity-0'}`}>
-            <div className="relative">
-              <img 
-                src="https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&fit=crop&q=80&w=800&h=600"
-                alt="Projeto de móveis personalizados"
-                className="w-full h-96 object-cover rounded-2xl shadow-2xl hover-lift"
-              />
-              <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg border">
-                <Award className="w-8 h-8 text-black" />
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
@@ -114,7 +70,7 @@ const About = () => {
               className={`text-center p-6 rounded-xl hover:bg-gray-50 transition-all duration-300 hover:scale-105 border ${
                 isVisible ? 'animate-fade-in opacity-100' : 'opacity-0'
               }`}
-              style={{ animationDelay: `${800 + index * 100}ms` }}
+              style={{ animationDelay: `${400 + index * 100}ms` }}
             >
               <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-100 rounded-full mb-4">
                 <feature.icon className="w-8 h-8 text-black" />
