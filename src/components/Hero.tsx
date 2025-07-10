@@ -20,11 +20,11 @@ const Hero = () => {
 
         {/* Main Headline */}
         <h1 className={`text-5xl md:text-7xl lg:text-8xl font-bold mb-8 transition-all duration-1000 delay-200 ${isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0'}`}>
+          <span className="text-black font-playfair">Movvi</span>
+          <br />
           <span className="text-black font-playfair">Projetos de</span>
           <br />
           <span className="text-black font-playfair">Móveis</span>
-          <br />
-          <span className="text-black font-playfair">Exclusivos</span>
         </h1>
 
         {/* Subtitle */}
@@ -37,16 +37,18 @@ const Hero = () => {
         {/* CTA Buttons */}
         <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center mb-20 transition-all duration-1000 delay-600 ${isVisible ? 'animate-scale-in opacity-100' : 'opacity-0'}`}>
           <a
-            href="#about"
+            href="#projects"
             className="bg-black text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-800 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
           >
-            Ver Serviços
+            Ver Projetos
           </a>
           <a
-            href="#faq"
+            href="https://www.instagram.com/movvibr/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="border-2 border-black text-black px-8 py-4 rounded-full font-semibold text-lg hover:bg-black hover:text-white transition-all duration-300 hover:scale-105"
           >
-            Solicitar Orçamento
+            Orçamentos
           </a>
         </div>
 

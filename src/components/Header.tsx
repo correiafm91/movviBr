@@ -18,6 +18,7 @@ const Header = () => {
   const navLinks = [
     { href: '#home', label: 'Início' },
     { href: '#about', label: 'Sobre' },
+    { href: '#projects', label: 'Projetos' },
     { href: '#stats', label: 'Resultados' },
     { href: '#faq', label: 'FAQ' }
   ];
@@ -35,7 +36,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center space-x-3 animate-fade-in">
             <span className="text-2xl font-bold text-black font-playfair">
-              Projetos de Móveis
+              Movvi
             </span>
           </div>
 
@@ -57,10 +58,12 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden md:block animate-fade-in">
             <a
-              href="#faq"
+              href="https://www.instagram.com/movvibr/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-800 transition-all duration-300 hover:scale-105 shadow-lg"
             >
-              Consulta Gratuita
+              Orçamentos
             </a>
           </div>
 
@@ -89,11 +92,13 @@ const Header = () => {
               ))}
               <div className="px-6 py-3">
                 <a
-                  href="#faq"
+                  href="https://www.instagram.com/movvibr/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block text-center bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-800 transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Consulta Gratuita
+                  Orçamentos
                 </a>
               </div>
             </div>

@@ -1,15 +1,13 @@
 
 import React from 'react';
-import { Facebook, Instagram, Linkedin, Youtube } from 'lucide-react';
+import { Instagram, Facebook } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: Instagram, href: '#', label: 'Instagram' },
-    { icon: Facebook, href: '#', label: 'Facebook' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Youtube, href: '#', label: 'YouTube' }
+    { icon: Instagram, href: 'https://www.instagram.com/movvibr/', label: 'Instagram' },
+    { icon: Facebook, href: '#', label: 'Facebook' }
   ];
 
   return (
@@ -24,6 +22,8 @@ const Footer = () => {
                 <a
                   key={social.label}
                   href={social.href}
+                  target={social.href.startsWith('http') ? '_blank' : undefined}
+                  rel={social.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                   className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-black hover:text-white transition-all duration-300"
                   aria-label={social.label}
                 >
@@ -38,7 +38,7 @@ const Footer = () => {
         <div className="border-t border-gray-200 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-gray-600 text-sm">
-              © {currentYear} Projetos de Móveis. Todos os direitos reservados.
+              © {currentYear} Movvi. Todos os direitos reservados.
             </div>
             <div className="flex gap-6 text-sm text-gray-600">
               <a href="#" className="hover:text-black transition-colors">
