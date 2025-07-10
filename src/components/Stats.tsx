@@ -91,23 +91,18 @@ const Stats = () => {
   ];
 
   return (
-    <section id="stats" ref={sectionRef} className="py-20 bg-blue-800 text-white relative overflow-hidden">
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-white/5 rounded-full animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-24 h-24 bg-white/10 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
-      </div>
-      
+    <section id="stats" ref={sectionRef} className="py-20 bg-gray-50 text-black relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className={`text-4xl md:text-6xl font-bold mb-6 font-playfair transition-all duration-1000 ${isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0'}`}>
-            <span className="text-white">Números que </span>
-            <span className="text-white">Impressionam</span>
+            <span className="text-black">Números que </span>
+            <span className="text-black">Impressionam</span>
           </h2>
-          <p className={`text-xl text-white/80 max-w-3xl mx-auto transition-all duration-1000 delay-200 ${isVisible ? 'animate-fade-in opacity-100' : 'opacity-0'}`}>
+          <p className={`text-xl text-gray-600 max-w-3xl mx-auto transition-all duration-1000 delay-200 ${isVisible ? 'animate-fade-in opacity-100' : 'opacity-0'}`}>
             Nossa trajetória de sucesso é refletida em números que demonstram a 
-            <span className="text-white font-semibold"> qualidade</span> e 
-            <span className="text-white font-semibold"> confiança</span> dos nossos projetos.
+            <span className="text-black font-semibold"> qualidade</span> e 
+            <span className="text-black font-semibold"> confiança</span> dos nossos projetos.
           </p>
         </div>
 
@@ -116,24 +111,24 @@ const Stats = () => {
           {stats.map((stat, index) => (
             <div 
               key={stat.label}
-              className={`text-center p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-500 hover:scale-105 ${
+              className={`text-center p-8 bg-white rounded-2xl border border-gray-200 hover:bg-gray-50 transition-all duration-500 hover:scale-105 shadow-lg ${
                 isVisible ? 'animate-counter opacity-100' : 'opacity-0'
               }`}
               style={{ animationDelay: `${400 + index * 150}ms` }}
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-6">
-                <stat.icon className="w-8 h-8 text-white" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-100 rounded-full mb-6">
+                <stat.icon className="w-8 h-8 text-black" />
               </div>
               
-              <div className="text-4xl md:text-5xl font-bold mb-3 text-white font-playfair">
+              <div className="text-4xl md:text-5xl font-bold mb-3 text-black font-playfair">
                 {stat.value}
               </div>
               
-              <h3 className="text-xl font-semibold mb-3 text-white">
+              <h3 className="text-xl font-semibold mb-3 text-black">
                 {stat.label}
               </h3>
               
-              <p className="text-white/80 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed">
                 {stat.description}
               </p>
             </div>
@@ -141,7 +136,7 @@ const Stats = () => {
         </div>
 
         <div className={`text-center mt-16 transition-all duration-1000 delay-800 ${isVisible ? 'animate-fade-in opacity-100' : 'opacity-0'}`}>
-          <p className="text-lg text-white/80 mb-6">
+          <p className="text-lg text-gray-600 mb-6">
             Faça parte dessas estatísticas de sucesso!
           </p>
         </div>

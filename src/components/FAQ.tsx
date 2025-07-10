@@ -60,23 +60,23 @@ const FAQ = () => {
   ];
 
   return (
-    <section id="faq" ref={sectionRef} className="py-20 bg-blue-900">
+    <section id="faq" ref={sectionRef} className="py-20 bg-white">
       <div className="max-w-4xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className={`inline-flex items-center px-4 py-2 bg-white/10 rounded-full border border-white/20 mb-6 transition-all duration-1000 ${isVisible ? 'animate-fade-in opacity-100' : 'opacity-0'}`}>
-            <HelpCircle className="w-4 h-4 text-white mr-2" />
-            <span className="text-white font-medium">Perguntas Frequentes</span>
+          <div className={`inline-flex items-center px-4 py-2 bg-gray-100 rounded-full border border-gray-200 mb-6 transition-all duration-1000 ${isVisible ? 'animate-fade-in opacity-100' : 'opacity-0'}`}>
+            <HelpCircle className="w-4 h-4 text-black mr-2" />
+            <span className="text-black font-medium">Perguntas Frequentes</span>
           </div>
           
           <h2 className={`text-4xl md:text-6xl font-bold mb-6 font-playfair transition-all duration-1000 delay-200 ${isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0'}`}>
-            <span className="text-white">Dúvidas </span>
-            <span className="text-white">Frequentes</span>
+            <span className="text-black">Dúvidas </span>
+            <span className="text-black">Frequentes</span>
           </h2>
           
-          <p className={`text-xl text-white/80 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isVisible ? 'animate-fade-in opacity-100' : 'opacity-0'}`}>
+          <p className={`text-xl text-gray-600 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isVisible ? 'animate-fade-in opacity-100' : 'opacity-0'}`}>
             Esclarecemos as principais dúvidas sobre nossos serviços de 
-            <span className="text-white font-semibold"> desenvolvimento de projetos técnicos</span> para móveis personalizados.
+            <span className="text-black font-semibold"> desenvolvimento de projetos técnicos</span> para móveis personalizados.
           </p>
         </div>
 
@@ -87,12 +87,12 @@ const FAQ = () => {
               <AccordionItem 
                 key={index} 
                 value={`item-${index}`}
-                className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 px-6 py-2 hover:bg-white/10 transition-colors"
+                className="bg-gray-50 rounded-2xl border border-gray-200 px-6 py-2 hover:bg-gray-100 transition-colors"
               >
-                <AccordionTrigger className="text-left text-lg font-semibold text-white hover:text-white/80 hover:no-underline transition-colors py-6">
+                <AccordionTrigger className="text-left text-lg font-semibold text-black hover:text-gray-700 hover:no-underline transition-colors py-6">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-white/80 pb-6 pt-2 leading-relaxed">
+                <AccordionContent className="text-gray-600 pb-6 pt-2 leading-relaxed">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
